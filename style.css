@@ -1,18 +1,25 @@
+@font-face {
+    font-family: 'Prata';
+    src: url('../fonts/Prata-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* ---------------------------------- */
 /* 🌐 Базовые переменные и утилиты   */
 /* ---------------------------------- */
 
 :root {
     /* Цвета */
-    --color-bg: #ffffff;
-    --color-text: #111111;
-    --color-primary: #005cff;
-    --color-accent: #ff005c;
+    --color-bg: #1E1E1E;
+    --color-text: #FFFFFF;
+    --color-primary: rgb(17, 17, 17);
+    --color-accent: #3a545c;
     --color-muted: #888888;
 
     /* Типографика */
-    --font-main: 'Arial', sans-serif;
-    --font-size-base: 16px;
+    --font-main: 'Prata', sans-serif;
+    --font-size-base: 10px;
     --font-size-lg: 1.25rem;
     --font-size-sm: 0.875rem;
 
@@ -32,9 +39,16 @@
 /* 🧱 Базовые стили                  */
 /* ---------------------------------- */
 html {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: var(--font-size-base);
+    line-height: calc(var(--font-size-base) * 1.2);
+    font-weight: 400;
     -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: calc(var(--font-size-base) * 0.8);
+    }
 }
 
 body {
@@ -182,25 +196,6 @@ p {
 /* 🔘 Кнопки и формы                */
 /* ---------------------------------- */
 
-button,
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: var(--radius);
-    background-color: var(--color-primary);
-    color: white;
-    transition: background-color var(--transition);
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-button:hover,
-.btn:hover {
-    background-color: var(--color-accent);
-}
-
 input,
 textarea,
 select {
@@ -216,4 +211,30 @@ textarea:focus,
 select:focus {
     border-color: var(--color-primary);
     outline: none;
+}
+
+.button {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    
+    border-radius: 5px;
+    padding: 3.4rem 1rem;
+    width: 100%;
+    transition: background 0.4s ease;
+}
+
+.button--order {
+    background: var(--color-text);
+    color: var(--color-bg);
+}
+
+.button--submit {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.button--order:hover {
+    background: #CCCCCC;
 }

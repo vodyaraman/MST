@@ -1,6 +1,6 @@
 console.log('Шаблон готов!');
 
 // пример модуля
-import { greet } from './utils/utils.js';
+import HeaderChangeBackground from './utils/utils.js';
 
-greet('мир');
+HeaderChangeBackground();

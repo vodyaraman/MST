@@ -1,21 +1,150 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Starter</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
   <link rel="stylesheet" href="/styles/normalize.css" />
 </head>
+
 <body>
   <header class="header">
-    <h1>Мой быстрый шаблон</h1>
+    <div class="header__inner">
+      <div class="header__logo">DALLE</div>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#">EXHIBITION</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">SURREAL JOURNEY</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="main">
-    <p>Готово к работе!</p>
+    <section class="hero">
+      <div class="hero__content">
+        <h1>The Surreal World of Dalle</h1>
+        <p class="hero__subtext">An exclusive exhibition of surreal masterpieces</p>
+        <ul class="hero__stats">
+          <li><img src="/pics/tick.svg" alt="Tick"> Discover <strong>10,000</strong> enigmatic artworks</li>
+          <li><img src="/pics/tick.svg" alt="Tick"> <strong>30%</strong> beyond the boundaries of reality</li>
+          <li><img src="/pics/tick.svg" alt="Tick"> Explore <strong>17%</strong> of melting clocks & twisted visions
+          </li>
+        </ul>
+        <div class="hero__button-wrapper">
+          <button class="button button--order">ENTER THE SURREAL</button>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img src="/pics/pic1.webp" alt="Surreal Exhibition">
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features__image features__image--left">
+        <img src="/pics/pic2.webp" alt="Surreal Dreamscape Left">
+      </div>
+
+      <article class="features__content">
+        <ul class="features__list">
+          <li class="features__item">
+            <img src="/pics/tip.svg" alt="Icon">
+            <p>Step into dreamlike realms painted with distorted perspectives</p>
+          </li>
+          <li class="features__item">
+            <img src="/pics/tip.svg" alt="Icon">
+            <p>Witness clocks melting into the sands of timeless illusions</p>
+          </li>
+          <li class="features__item">
+            <img src="/pics/tip.svg" alt="Icon">
+            <p>Explore the paradox of form and fluidity woven into each surreal masterpiece</p>
+          </li>
+          <li class="features__item">
+            <img src="/pics/tip.svg" alt="Icon">
+            <p>Experience the intersection of dreams and reality through Dalle's unique vision</p>
+          </li>
+        </ul>
+        <div class="features__button-wrapper">
+          <button class="button button--order">DISCOVER MORE</button>
+        </div>
+      </article>
+
+      <div class="features__image features__image--right">
+        <img src="/pics/pic3.webp" alt="Surreal Dreamscape Right">
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact__container">
+        <div class="contact__container-bg">
+          <img src="/pics/contact-bg.png" alt="Surreal Background">
+        </div>
+        <h2>Join the Surreal Experience</h2>
+        <form action="#" method="POST" class="contact__form">
+          <label for="name" class="visually-hidden">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+          <label for="email" class="visually-hidden">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Your E-mail" required>
+
+          <label class="contact__checkbox">
+            <input type="checkbox" name="privacy" required>
+            <span class="contact__checkbox-mark"></span>
+            I accept the Privacy Policy
+          </label>
+
+          <button type="submit" class="button button--submit">JOIN US</button>
+        </form>
+
+        <div class="contact__image">
+          <img src="/pics/contact.png" alt="Surreal Experience">
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="#">EXHIBITION</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="#">DREAMSCAPES</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__main">
+          <h3>DALLE</h3>
+
+          <div class="footer__socials">
+            <a href="#"><img src="/pics/social-links/inst.svg" alt="Instagram"></a>
+            <a href="#"><img src="/pics/social-links/tiktok.svg" alt="TikTok"></a>
+            <a href="#"><img src="/pics/social-links/linkedin.svg" alt="LinkedIn"></a>
+            <a href="#"><img src="/pics/social-links/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="/pics/social-links/tg.svg" alt="Telegram"></a>
+            <a href="#"><img src="/pics/social-links/youtube.svg" alt="YouTube"></a>
+          </div>
+
+          <div class="footer__button-wrapper">
+            <button class="button button--order">ORDER</button>
+          </div>
+        </div>
+
+        <div class="footer__meta">
+          <p>© 2024, The Surreal Legacy of Dalle.</p>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </footer>
   </main>
 
   <script type="module" src="script.js"></script>
 </body>
+
 </html>
